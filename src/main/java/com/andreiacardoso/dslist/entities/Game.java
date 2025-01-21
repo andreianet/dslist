@@ -26,15 +26,20 @@ public class Game {
     private String genre;
     @Getter
     @Setter
-    private String platform;
+    private String platforms;
+    @Getter
+    @Setter
+    private Double score;
     @Getter
     @Setter
     private String imgUrl;
     @Getter
     @Setter
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
     @Getter
     @Setter
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
 
