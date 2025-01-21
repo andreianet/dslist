@@ -2,6 +2,8 @@ package com.andreiacardoso.dslist.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -9,39 +11,20 @@ import lombok.*;
 @Entity
 @Table(name = "tb_Game")
 public class Game {
-    @Getter
-    @Setter
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Getter
-    @Setter
-    private String title;
-    @Getter
-    @Setter
+    private @Getter @Setter Long id;
+    private @Getter @Setter String title;
     @Column(name = "game_year")
-    private Integer year;
-    @Getter
-    @Setter
-    private String genre;
-    @Getter
-    @Setter
-    private String platforms;
-    @Getter
-    @Setter
-    private Double score;
-    @Getter
-    @Setter
-    private String imgUrl;
-    @Getter
-    @Setter
+    private @Getter  @Setter  Integer year;
+    private @Getter @Setter String genre;
+    private @Getter @Setter String platforms;
+    private @Getter @Setter Double score;
+    private @Getter @Setter String imgUrl;
     @Column(columnDefinition = "TEXT")
-    private String shortDescription;
-    @Getter
-    @Setter
+    private @Getter @Setter String shortDescription;
     @Column(columnDefinition = "TEXT")
-    private String longDescription;
-
-
+    private @Getter @Setter String longDescription;
 
 }
